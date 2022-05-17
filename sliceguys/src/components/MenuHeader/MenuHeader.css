@@ -1,0 +1,75 @@
+.menuHeader{
+  background-color: #8f9d9f;
+}
+
+.mid-nav {
+    position: absolute;
+    background-color: rgb(255 255 255);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: -webkit-center;
+    transition: 0.4s;
+    transition-delay: inherit;
+    transition: 1s ease-in-out;
+    border: 1px solid #b3b3b3;
+    border-radius: 8px;
+  }
+  .mid-nav p {
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    color: #1a1a1a;
+    border: 1px solid #9b9494;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  .mid-nav p:hover {
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+  }
+  .smallNavMenuIcon{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+  }
+.smallNav {
+    display: none;
+  }
+
+  .logo1{
+    height: 10vh;
+    width: 50px;
+  }
+  .logo2{
+    height: 10vh;
+    width: 100%;
+    margin: auto;
+  }
+  
+  @media only screen and (max-width: 999px) {
+    .smallNav{
+      display: block;
+    }
+    .smallNavMenuIcon{
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding: 0px;
+    }
+    .smallNavMenuIcon  .smallNav span{
+      margin: 0px 10px;
+      height: 50px;
+      width: 50px;
+    }
+  }  
+  @media only screen and (max-width: 600px) {
+    .mid-nav{
+        width: 15%;
+    }
+  }  

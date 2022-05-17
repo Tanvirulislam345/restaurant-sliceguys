@@ -1,0 +1,165 @@
+.formContainer{
+  padding: 50px 0px;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.formsection{
+  padding: 20px;
+}
+
+.formsection .smallInputContainer, 
+.formsection .submitInputContainer{
+  display: flex;
+
+}
+.formsection .smallInputContainer .smallInput,
+.formsection .submitInputContainer .smallInput{
+  margin: 5px;
+}
+
+.formsection label {
+  font-size: 15px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formsection .smallInputContainer .smallInput input,
+.formsection .smallInputContainer .smallInput select {
+  height: 40px;
+  border: 1px solid black;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+  padding: 0 7px;
+  font-size: 16px;
+}
+
+.formsection select:focus,
+.formsection input:focus {
+  outline: none;
+}
+
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.btn{
+  padding: 5px 10px;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: larger;
+  color: rgb(136, 120, 101);
+ margin-top: 10px;
+ margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 490px) {
+  .formsection .smallInputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+.addressForm{
+  background-image: url("../../assets//images/background.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ padding: 50px 0px;
+
+}
+.addressFormContainer{
+  max-width: 570px;
+  padding: 20px;
+  padding-left: 40px;
+  margin: auto;
+}
+.rowContainer{
+  display: flex;
+}
+.rowContainer .rowItem{
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.rowContainer .rowItem label{
+  font-size: 16px;
+  font-weight: 500;
+}
+.rowContainer .rowItem select,
+.rowContainer .rowItem input{
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  width: 250px;
+  padding: 10px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #EEEEEE;
+  border: 1px solid black;
+ }
+
+ .frombutton{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  background-color: #080808;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 22px;
+  margin: 20px 0px;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+.frombutton:hover{
+  color: bisque;
+  background-color: gray;
+}
+
+.profile{
+  width: 500px;
+  padding-bottom: 25px;
+}
+@media only screen and (max-width: 999px) {
+  .profile{
+      width: 100%;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .addressForm{
+      padding: 0px;
+  }
+  .addressFormContainer{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+  }
+  .rowContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .rowItem{
+      display: flex;
+      flex-direction: column;
+    }
+}

@@ -1,0 +1,124 @@
+/* sidecart style  */
+.Sidecart {
+	background-color: white;
+	box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+	padding-top: 5px;
+	border-radius: 5px;
+	min-height: 100vh;
+}
+.Sidecart .ContainerCart {
+	height: 50vh;
+	overflow: auto;
+}
+.cartHeader {
+	width: 100%;
+	text-align: -webkit-right;
+}
+
+.cartHeader p {
+	width: 50%;
+	background-color: #ffe500;
+	color: black;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+	font-weight: 400;
+	font-size: x-large;
+	font-family: "Bebas Neue";
+	border-top-left-radius: 20px;
+	border-top-right-radius: 00px;
+	border-bottom-right-radius: 00px;
+	border-bottom-left-radius: 20px;
+}
+.Sidecart .priceDiv {
+	padding: 10px;
+}
+.Sidecart .priceDiv .price {
+	display: flex;
+	justify-content: space-between;
+}
+
+.Sidecart .priceDiv hr {
+	height: 2px;
+	background-color: black;
+	border: none;
+}
+.Sidecart .priceDiv .price b {
+	font-family: Helvetica Neue;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 33px;
+	color: #222831;
+}
+.checkoutButton {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0px;
+}
+.checkoutButton button {
+	background: #ffe500;
+	border-radius: 10px;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 36px;
+	border: none;
+	padding: 10px 30px;
+	font-family: Helvetica Neue;
+	font-style: normal;
+}
+
+/* sidecart  */
+.cartItem {
+	margin: 10px 5px;
+	padding: 5px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.cartItem .cartItemQuentity {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.cartItem .cartItemImage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.cartItem .cartItemImage img {
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.cartItem .details {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: Helvetica Neue;
+	padding: 0px;
+}
+.cartItem .toggle {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* side cart ingredients  */
+.extraAdons {
+	padding: 10px;
+	margin: 10px 10px;
+	border: 1px solid rgb(214, 214, 214);
+	border-radius: 10px;
+	transition: 1s ease-in-out;
+}
+
+@media only screen and (max-width: 999px) {
+	.cartHeader {
+		display: none;
+	}
+}
