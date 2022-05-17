@@ -17,25 +17,33 @@ const UsersListResult = ({ alldata, handleUpdate }) => {
                 <Table aria-label="spanning table">
                     <TableHead>
                         <TableRow>
-                            <TableCell sx={{ color: "#F2D7D5" }}>Email</TableCell>
-                            <TableCell sx={{ color: "#F2D7D5" }}>Password</TableCell>
-                            <TableCell sx={{ color: "#F2D7D5" }}>Role</TableCell>
-                            <TableCell sx={{ color: "#F2D7D5" }}>Make Admin</TableCell>
+                            <TableCell sx={{ color: "black" }}>Email</TableCell>
+                            <TableCell sx={{ color: "black" }}>Password</TableCell>
+                            <TableCell sx={{ color: "black" }}>Role</TableCell>
+                            <TableCell sx={{ color: "black" }}>Make Admin</TableCell>
+                            <TableCell sx={{ color: "black" }}>Remove Admin</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {alldata ? (
                             alldata?.reverse().map((user) => (
                                 <TableRow key={user._id} order={user}>
-                                    <TableCell sx={{ color: "#F2D7D5" }}>{user.email}</TableCell>
-                                    <TableCell sx={{ color: "#F2D7D5" }}>{user.password}</TableCell>
-                                    <TableCell sx={{ color: "#F2D7D5" }}>{user.role}</TableCell>
-                                    <TableCell sx={{ color: "#F2D7D5" }}>
+                                    <TableCell sx={{ color: "black" }}>{user.email}</TableCell>
+                                    <TableCell sx={{ color: "black" }}>{user.password}</TableCell>
+                                    <TableCell sx={{ color: "black" }}>{user.role}</TableCell>
+                                    <TableCell sx={{ color: "black" }}>
                                         <Button
                                             size="small"
-                                            onClick={() => handleUpdate(user._id)}
+                                            onClick={() => handleUpdate(user._id, "admin")}
                                         >
                                             Make Admin
+                                        </Button></TableCell>
+                                    <TableCell sx={{ color: "black" }}>
+                                        <Button
+                                            size="small"
+                                            onClick={() => handleUpdate(user._id, "user")}
+                                        >
+                                            Remove Admin
                                         </Button></TableCell>
                                 </TableRow>
                             ))

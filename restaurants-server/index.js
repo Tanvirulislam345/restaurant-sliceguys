@@ -77,7 +77,7 @@ async function run() {
 			// console.log(result);
 			res.json(result);
 		});
-		app.get("/makeadmin/:id", async (req, res) => {
+		app.put("/makeadmin/:id", async (req, res) => {
 			const id = req.params.id;
 			const query = { _id: ObjectId(id) };
 			const data = req.body;
@@ -88,7 +88,9 @@ async function run() {
 				updateDoc,
 				options
 			);
+			console.log(updateDoc)
 			res.json(result);
+
 		});
 
 		app.post("/address-collection", async (req, res) => {

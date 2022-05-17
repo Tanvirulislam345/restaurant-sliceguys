@@ -9,14 +9,15 @@ const MakeAdmin = () => {
     const [alldata, setAlldata] = useState([]);
     const [status, setStatus] = useState(false);
 
-    const handleUpdate = (id) => {
+    const handleUpdate = (id, data) => {
         const statusChange = {
-            status: "admin",
+            "role": data,
         };
 
         const url = `http://localhost:9000/makeadmin/${id}`;
         // const url = `https://restaurantsliceguys.sliceguys.co.uk/makeadmin/${id}${id}`;
         axios.put(url, statusChange).then((res) => {
+            console.log(res)
             if (res.data.modifiedCount > 0) {
                 setStatus(!status);
             }
