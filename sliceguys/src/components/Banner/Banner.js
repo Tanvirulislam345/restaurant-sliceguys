@@ -4,12 +4,7 @@ import swal from "sweetalert";
 
 function Banner() {
 	const [alldata, setAlldata] = useState([]);
-	if (alldata?.length > 0) {
-		swal({
-			text: "This website was published for testing",
-			icon: "warning",
-		});
-	}
+
 	useEffect(() => {
 		fetch("https://restaurantsliceguys.sliceguys.co.uk/allbanner")
 			.then((res) => res.json())

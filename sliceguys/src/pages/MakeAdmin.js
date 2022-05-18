@@ -10,25 +10,25 @@ const MakeAdmin = () => {
     const [status, setStatus] = useState(false);
 
     const handleUpdate = (id, data) => {
-        const statusChange = {
-            "role": data,
-        };
+      const statusChange = {
+        role: data,
+      };
 
-        const url = `http://localhost:9000/makeadmin/${id}`;
-        // const url = `https://restaurantsliceguys.sliceguys.co.uk/makeadmin/${id}${id}`;
-        axios.put(url, statusChange).then((res) => {
-            console.log(res)
-            if (res.data.modifiedCount > 0) {
-                setStatus(!status);
-            }
-        });
+      // const url = `http://localhost:9000/makeadmin/${id}`;
+      const url = `https://restaurantsliceguys.sliceguys.co.uk/makeadmin/${id}`;
+      axios.put(url, statusChange).then((res) => {
+        console.log(res);
+        if (res.data.modifiedCount > 0) {
+          setStatus(!status);
+        }
+      });
     };
 
     useEffect(() => {
-        fetch("http://localhost:9000/makeadmin")
-            // fetch("https://restaurantsliceguys.sliceguys.co.uk/makeadmin")
-            .then((res) => res.json())
-            .then((data) => setAlldata(data));
+      // fetch("http://localhost:9000/makeadmin")
+      fetch("https://restaurantsliceguys.sliceguys.co.uk/makeadmin")
+        .then((res) => res.json())
+        .then((data) => setAlldata(data));
     }, [status]);
     return (
         <Box
