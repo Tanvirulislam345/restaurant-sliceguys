@@ -316,9 +316,7 @@ async function run() {
 		});
 
 		// This is your test secret API key.
-		const stripe = require("stripe")(
-			"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"
-		);
+		const stripe = require("stripe")(${process.env.DB_API});
 
 		app.post("/create-payment-intent", async (req, res) => {
 			const paymentInfo = req.body;
